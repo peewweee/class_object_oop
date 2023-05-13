@@ -3,23 +3,18 @@
 
 # pseudocode
 # create class tv
-class TV:
-    def __init__(self, TvNumber, TurnOn, TurnOff, GetChannel, SetVolume, GetVolume):
-        self.TvNumber = TvNumber
-        self.TurnOn = TurnOn
-        self.TurnOff = TurnOff
-        self.GetChannel = GetChannel
-        self.SetVolume = SetVolume
-        self.GetVolume = GetVolume
-    # method to display objects
-    def show(self):
-        print(self.TvNumber, self.GetChannel, self.GetVolume)
+    # channel, volume, on/off
+    # turn on method
+    # turn off method
+    # return channel method
+    # set new channel
+    # return volume
+    # set volume
+    # increase channel
+    # increase volume
+    # decrease volume
 
-# Test driver program
-def TestTV():
+# test driver program
     # create two objects
-    first_tv = TV('TV 1','None', 'None', 30, 'None', 3)
-    first_tv.show()
 
-# call test driver method
-TestTV()
+# call test driver program method
