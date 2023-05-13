@@ -2,6 +2,7 @@
 # Phoebe Rhone L. Gangoso | BSCPE 1-4
 
 import PySimpleGUI as sg
+sg.theme('dark green')
 
 # pseudocode
 # create class tv
@@ -22,7 +23,7 @@ class TV:
         return self.Channel
     # set new channel
     def SetChannel(self, Channel):
-        if 1 <= Channel <= 120:
+        if self.on and 1 <= Channel <= 120:
             self.Channel = Channel
     # return volume
     def GetVolume(self):
@@ -47,6 +48,7 @@ class TV:
     def VolumeDown(self):
         if self.on and self.VolumeLevel > 1:
             self.VolumeLevel -= 1
+
 
 # test driver program
     # create two objects
@@ -73,6 +75,8 @@ def TestTV():
         event, values = window.read()
         if event == 'Exit' or event == sg.WIN_CLOSED:
             break
+
+    window.close()
 
 # call test driver program method
 TestTV()
