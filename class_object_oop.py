@@ -53,7 +53,15 @@ def TestTV():
     first_tv.TurnOn()
     first_tv.SetChannel(30)
     first_tv.SetVolume(3)
-    print(first_tv.GetVolume())
+
+    second_tv = TV()
+    second_tv.TurnOn()
+    second_tv.ChannelUp()
+    second_tv.ChannelUp()
+    second_tv.SetVolume(2)
+
+    print("TV 1's channel is", first_tv.GetChannel(), "and volume level is", first_tv.GetVolume())
+    print("TV 2's channel is", second_tv.GetChannel(), "and volume level is", second_tv.GetVolume())
 
 # call test driver program method
 TestTV()
