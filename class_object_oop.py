@@ -10,6 +10,8 @@ class TV:
         self.VolumeLevel = 1
         self.on = False
     # turn on method
+    def TurnOn(self):
+        self.on = True
     # turn off method
     # return channel method
     def GetChannel(self):
@@ -23,7 +25,7 @@ class TV:
         return self.VolumeLevel
     # set volume
     def SetVolume(self, VolumeLevel):
-        if 1 <= VolumeLevel <= 7:
+        if self.on and 1 <= VolumeLevel <= 7:
             self.VolumeLevel = VolumeLevel
     # increase channel
     # decrease channel
