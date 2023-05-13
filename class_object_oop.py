@@ -19,7 +19,12 @@ class TV:
         if 1 <= Channel <= 120:
             self.Channel = Channel
     # return volume
+    def GetVolume(self):
+        return self.VolumeLevel
     # set volume
+    def SetVolume(self, VolumeLevel):
+        if 1 <= VolumeLevel <= 7:
+            self.VolumeLevel = VolumeLevel
     # increase channel
     # decrease channel
     # increase volume
@@ -30,7 +35,8 @@ class TV:
 def TestTV():
     first_tv = TV()
     first_tv.SetChannel(30)
-    print(first_tv.GetChannel())
+    first_tv.SetVolume(3)
+    print(first_tv.GetVolume())
 
 # call test driver program method
 TestTV()
