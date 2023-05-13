@@ -62,10 +62,9 @@ def TestTV():
     second_tv.ChannelUp()
     second_tv.SetVolume(2)
 
-    layout = [[sg.Text(f"TV 1's channel is {first_tv.GetChannel()} and volume level is {first_tv.GetVolume()}",
-                       font='helvetica')],
-              [sg.Text(f"TV 2's channel is {second_tv.GetChannel()} and volume level is {second_tv.GetVolume()}",
-                       font='helvetica')],
+    layout = [[sg.Text(f"TV 1's channel is {first_tv.GetChannel()} and volume level is {first_tv.GetVolume()}", font="Arial")],
+              [sg.Text(f"TV 2's channel is {second_tv.GetChannel()} and volume level is {second_tv.GetVolume()}", font='Arial')],
+              [sg.Text(f"\N{television}", font=100)],
               [sg.Button('Exit')]]
 
     window = sg.Window('TV Class', layout, margins=(75,30), element_justification='c')
@@ -74,8 +73,6 @@ def TestTV():
         event, values = window.read()
         if event == 'Exit' or event == sg.WIN_CLOSED:
             break
-
-    window.close()
 
 # call test driver program method
 TestTV()
