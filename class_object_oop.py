@@ -13,6 +13,8 @@ class TV:
     def TurnOn(self):
         self.on = True
     # turn off method
+    def TurnOff(self):
+        self.on = False
     # return channel method
     def GetChannel(self):
         return self.Channel
@@ -28,9 +30,21 @@ class TV:
         if self.on and 1 <= VolumeLevel <= 7:
             self.VolumeLevel = VolumeLevel
     # increase channel
+    def ChannelUp(self):
+        if self.on and self.Channel < 120:
+            self.Channel += 1
     # decrease channel
+    def ChannelDown(self):
+        if self.on and self.Channel > 1:
+            self.Channel -= 1
     # increase volume
+    def VolumeUp(self):
+        if self.on and self.VolumeLevel < 7:
+            self.VolumeLevel += 1
     # decrease volume
+    def VolumeDown(self):
+        if self.on and self.VolumeLevel > 1:
+            self.VolumeLevel -= 1
 
 # test driver program
     # create two objects
