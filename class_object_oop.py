@@ -36,6 +36,7 @@ class TV:
     # create two objects
 def TestTV():
     first_tv = TV()
+    first_tv.TurnOn()
     first_tv.SetChannel(30)
     first_tv.SetVolume(3)
     print(first_tv.GetVolume())
