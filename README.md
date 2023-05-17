@@ -2,8 +2,14 @@
 
 *A python program that uses object oriented programming.*
 
+**TestTV.py**
+>This is the main program file.
+
+**TestTV.py**
+>This is the TV class file that calls the main program file.
+
 **Try to run and use the program**
->1. With your IDE, run the program.
+>1. With your IDE, open TestTV.py then run the program.
 >5. The program will generate the PySimpleGUI Window which outputs TV 1 and TV 2's channel and volume level.
 
 **The program used:**
