@@ -1,8 +1,5 @@
-# Class and Object - OOP
+# TV Class
 # Phoebe Rhone L. Gangoso | BSCPE 1-4
-
-import PySimpleGUI as sg
-sg.theme('dark green')
 
 # pseudocode
 # create class tv
@@ -49,33 +46,3 @@ class TV:
         if self.on and self.VolumeLevel > 1:
             self.VolumeLevel -= 1
 
-# test driver program
-    # create two objects
-def TestTV():
-    first_tv = TV()
-    first_tv.TurnOn()
-    first_tv.SetChannel(30)
-    first_tv.SetVolume(3)
-
-    second_tv = TV()
-    second_tv.TurnOn()
-    second_tv.ChannelUp()
-    second_tv.ChannelUp()
-    second_tv.SetVolume(2)
-
-    layout = [[sg.Text(f"TV 1's channel is {first_tv.GetChannel()} and volume level is {first_tv.GetVolume()}", font="Arial")],
-              [sg.Text(f"TV 2's channel is {second_tv.GetChannel()} and volume level is {second_tv.GetVolume()}", font='Arial')],
-              [sg.Text(f"\N{television}", font=100)],
-              [sg.Button('Exit')]]
-
-    window = sg.Window('TV Class', layout, margins=(75,30), element_justification='c')
-
-    while True:
-        event, values = window.read()
-        if event == 'Exit' or event == sg.WIN_CLOSED:
-            break
-
-    window.close()
-
-# call test driver program method
-TestTV()
